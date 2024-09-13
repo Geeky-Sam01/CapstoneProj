@@ -1,0 +1,49 @@
+{% include 'header.html' %}
+
+{% block content%}
+<div class="row" style="margin-top: 5%;">
+    <div class="col-8">
+        <p class="fs-2">{{ name }}'s Dashboard</p>
+    </div>
+    <div class="col-3 d-flex justify-content-center">
+        <a class="btn btn-danger m-3" href="{% url 'empLogout'%}">Logout</a>
+    </div>
+</div>
+
+<div class="col bg-light">
+    <div class="row-6">
+        <div class="justify-content-center" style="overflow-y: auto; height: 600px;">
+            <form class="d-flex" action="{% url 'empDashboard' %}" method="POST">
+                {% csrf_token %}
+                <table class="table">
+                    <tr>
+                        <td>Name: </td>
+                        <td><input type="text" class="form-control" name="reader_name" value="{{name}}"></td>
+                    </tr>
+                    <tr></tr>
+                    <td>Contact: </td>
+                    <td><input type="text" class="form-control" name="reader_contact" value="+91 123456789"></td>
+                    </tr>
+                    <tr></tr>
+                    <td>Employee ID: </td>
+                    <td><input type="text" class="form-control" name="reader_ref_id" value="{{userId}}"></td>
+                    </tr>
+                    <tr>
+                        <td>Title: </td>
+                        <td><input type="text" class="form-control" name="reader_title" value="{{title}}"></td>
+                    </tr>
+                    <tr>
+                        <td>Department: </td>
+                        <td><input type="text" class="form-control" name="reader_dept" value="{{deptName}}" readonly="readonly"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"> <button class="btn btn-primary" type="submit">Save</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+    
+</div>
+{% endblock content %}

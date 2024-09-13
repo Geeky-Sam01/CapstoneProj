@@ -1,0 +1,80 @@
+{% include 'header.html' %}
+{% block content%}
+<style>
+    .custom-text-underline{
+        text-decoration: underline;
+        text-decoration-color: red
+    }
+</style>
+<div class="container-fluid py-5 bg-light d-flex align-items-center justify-content-center" style="height: 300px;
+background: rgb(0,0,0);
+background: linear-gradient(284deg, rgba(0,0,0,1) 0%, rgba(38,0,222,1) 100%, rgba(255,254,251,1) 100%);">
+    <div class="row">
+        <div class="col-8 d-flex align-items-center justify-content-center">
+            <p class="fs-4 font-monospace" style="color: blanchedalmond;">
+                <b>Welcome to <u class="custom-text-underline">Employee Management</u></b>
+            </p>
+        </div>
+        <div class="col-4 d-flex justify-content-center">
+            <a class="btn btn-outline-danger m-4" href="{% url 'empLogin' %}">Know More</a>
+        </div>      
+    </div>     
+</div>
+
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center my-2" style="margin-top: 2rem;">
+        <div class="col d-flex justify-content-center my-2">
+            <div class="card" style="width: 18rem;">
+                <img src="https://img.freepik.com/free-vector/communication-flat-icon_1262-18771.jpg?t=st=1726201580~exp=1726205180~hmac=38b397e58e4dcd39ac5594be9bea212cea03e6fa896eae2677a044c4b204f56b&w=826" class="card-img-top" alt="Sunset Over the Sea"/>
+                <div class="card-body mt-5">
+                    <p class="card-text">
+                        Fostering an exhuberant employee group 
+                        for your prosperous future.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col d-flex justify-content-center my-2">
+            <div class="card" style="width: 18rem;">
+                <img src="https://img.freepik.com/free-vector/coworkers-planning-making-objective_1262-19766.jpg?w=826&t=st=1726201612~exp=1726202212~hmac=4ce61ab7756025fac682d61fc876609dbe4c9c87c16d2640e21fece6f0944bb7" class="card-img-top" alt="Sunset Over the Sea"/>
+                <div class="card-body mt-5">
+                    <p class="card-text">
+                        Facilitate performance 
+                        reviews and goal setting with intuitive tools.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col d-flex justify-content-center my-2">
+            <div class="card" style="width: 18rem;">
+                <img src="https://img.freepik.com/free-vector/organization-abstract-concept_335657-3015.jpg?w=740&t=st=1726201661~exp=1726202261~hmac=d0f16fe14840b9ee0c8c77701cc850a6776c6c36b7a79e75b75ace18962b77d6" 
+                class="card-img-top" alt="Sunset Over the Sea" style="max-height: 7 rem;"/>
+                <div class="card-body">
+                    <p class="card-text">
+                        Empower employees to 
+                        manage their own profiles, benefits, and requests.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+<br><br>
+<div class="contianer-fluid my-3"style="height:200px;background: rgb(131,58,180); 
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);">
+    <div class="row" style="text-align: center; padding-top: 5rem;">
+        <h2 style="color: white"> <b>"Make an Impact that matters !"</b></h2>
+    </div>
+</div>
+
+<br><br><br><br>
+<div class="container-fluid bg-warning" style="border-top: 5px solid rgb(255, 193, 7);">
+    <div class="row">
+        <div class="d-flex justify-content-center align-items-center">
+            <p style="text-align: center;" class="fs-5 text-light">
+                Samannway Sil
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock content %}

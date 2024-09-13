@@ -1,0 +1,13 @@
+{% include 'header.html' %}
+<div class="row justify-content-center" style="margin-top: 10%;">
+    <div class="col-md-3 p-3 m-3">
+        <h2 class="text-muted">
+            <form action="{% url 'empLogin'%}" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-dark">Login</button>
+            </form>
+        </h2>
+        </h2>
+    </div>
+</div>
